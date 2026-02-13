@@ -1,16 +1,19 @@
+import dynamic from 'next/dynamic'
 import Hero from '@/components/sections/Hero'
-import Features from '@/components/sections/Features'
-import PremiumSection from '@/components/sections/PremiumSection'
-import Offers from '@/components/sections/Offers'
-import Recommendation from '@/components/sections/Recommendation'
-import HowToOrder from '@/components/sections/HowToOrder'
-import Testimonials from '@/components/sections/Testimonials'
-import WhoIsItFor from '@/components/sections/WhoIsItFor'
-import AuthoritySection from '@/components/sections/AuthoritySection'
-import FAQ from '@/components/sections/FAQ'
-import FinalCTA from '@/components/sections/FinalCTA'
-import Footer from '@/components/sections/Footer'
 import Header from '@/components/sections/Header'
+
+// Lazy load below-fold components to reduce initial bundle size
+const Features = dynamic(() => import('@/components/sections/Features'), { ssr: true })
+const PremiumSection = dynamic(() => import('@/components/sections/PremiumSection'), { ssr: true })
+const Offers = dynamic(() => import('@/components/sections/Offers'), { ssr: true })
+const Recommendation = dynamic(() => import('@/components/sections/Recommendation'), { ssr: true })
+const HowToOrder = dynamic(() => import('@/components/sections/HowToOrder'), { ssr: true })
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'), { ssr: true })
+const WhoIsItFor = dynamic(() => import('@/components/sections/WhoIsItFor'), { ssr: true })
+const AuthoritySection = dynamic(() => import('@/components/sections/AuthoritySection'), { ssr: true })
+const FAQ = dynamic(() => import('@/components/sections/FAQ'), { ssr: true })
+const FinalCTA = dynamic(() => import('@/components/sections/FinalCTA'), { ssr: true })
+const Footer = dynamic(() => import('@/components/sections/Footer'), { ssr: true })
 
 export default function Home() {
   return (

@@ -27,29 +27,39 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+      // Use GPU-accelerated transforms to avoid forced reflow
+      gsap.set([headingRef.current, subheadingRef.current, ctaRef.current, imageRef.current], {
+        willChange: 'transform, opacity',
+      })
+
+      const tl = gsap.timeline({ 
+        defaults: { 
+          ease: 'power3.out',
+          force3D: true,
+        } 
+      })
 
       tl.fromTo(
         headingRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, delay: 0.2 }
+        { yPercent: 20, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.8, delay: 0.2 }
       )
         .fromTo(
           subheadingRef.current,
-          { y: 25, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6 },
+          { yPercent: 15, opacity: 0 },
+          { yPercent: 0, opacity: 1, duration: 0.6 },
           '-=0.4'
         )
         .fromTo(
           ctaRef.current,
-          { y: 15, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6 },
+          { yPercent: 10, opacity: 0 },
+          { yPercent: 0, opacity: 1, duration: 0.6 },
           '-=0.3'
         )
         .fromTo(
           imageRef.current,
-          { x: 60, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.8 },
+          { xPercent: 10, opacity: 0 },
+          { xPercent: 0, opacity: 1, duration: 0.8, clearProps: 'willChange' },
           '-=0.5'
         )
     }, heroRef)
@@ -107,6 +117,9 @@ export default function Hero() {
                   fill
                   className="object-cover object-top"
                   priority
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
+                  quality={85}
                 />
               </div>
             </div>

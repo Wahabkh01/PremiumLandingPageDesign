@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
 
+const BASE_URL = 'https://www.premiumlandingpagedesigner.com'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://yourwebsite.com',
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
