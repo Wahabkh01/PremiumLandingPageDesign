@@ -1,21 +1,5 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins } from 'next/font/google'
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  preload: true,
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-  variable: '--font-display',
-  preload: true,
-})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -70,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en">
       <head>
         {/* Preload hero image for faster LCP */}
         <link
@@ -80,7 +64,7 @@ export default function RootLayout({
           type="image/webp"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

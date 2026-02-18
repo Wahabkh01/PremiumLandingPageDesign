@@ -41,14 +41,14 @@ export default function PremiumSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-white">
+    <section ref={sectionRef} className="section-spacing py-12 md:py-16 bg-white">
       <div className="container-custom">
-        <div ref={contentRef} className="max-w-3xl mx-auto">
-          <h2 className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-6 text-center">
+        <div ref={contentRef} className="max-w-2xl mx-auto text-left">
+          <h2 className="font-display font-bold text-xl md:text-4xl text-gray-900 mb-6">
             Premium Isn&apos;t Loud. Premium Is Clear.
           </h2>
 
-          <p className="text-gray-600 text-sm mb-4">Your landing page should:</p>
+          <p className="text-gray-600 text-md mb-4">Your landing page should:</p>
 
           <ul className="space-y-1.5 mb-6">
             {[
@@ -69,9 +69,6 @@ export default function PremiumSection() {
           </p>
         </div>
       </div>
-      
-      {/* Divider line */}
-      <div className="mt-12 border-t border-gray-200" />
     </section>
   )
 }

@@ -51,9 +51,9 @@ export default function Recommendation() {
   }
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-gray-50">
+    <section ref={sectionRef} className="section-spacing py-16 md:py-24 bg-[#F9F9F9]">
       <div className="container-custom">
-        <div className="max-w-3xl">
+        <div>
           <div ref={contentRef}>
             <h2 className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-4 leading-snug">
               Ready to move forward? Or want my recommendation first?
@@ -70,7 +70,7 @@ export default function Recommendation() {
             <div className="flex flex-row gap-3">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
-                className="px-6 py-2.5 bg-purple-600 text-white rounded font-medium text-sm hover:bg-purple-700 transition-all duration-300"
+                className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
               >
                 Book a Free Call
               </button>

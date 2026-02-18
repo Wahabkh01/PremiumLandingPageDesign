@@ -65,11 +65,8 @@ export default function Offers() {
   }
 
   return (
-    <section id="offers" ref={sectionRef} className="py-16 md:py-24 bg-white">
+    <section id="offers" ref={sectionRef} className="section-spacing py-16 md:py-24 bg-white">
       <div className="container-custom">
-        {/* Top divider line */}
-        <div className="border-t border-gray-200 mb-12" />
-        
         <h2
           ref={headingRef}
           className="font-display font-bold text-2xl md:text-3xl text-center text-gray-900 mb-12"
@@ -77,21 +74,21 @@ export default function Offers() {
           My Offers
         </h2>
 
-        <div ref={cardsRef} className="grid md:grid-cols-3 max-w-5xl mx-auto items-start">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6">
           {/* Offer 1 - Free Audit */}
-          <div className="bg-white pr-8">
+          <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
             <h3 className="font-bold text-base text-gray-900 mb-2">
               The 10-Minute Landing Page Clarity Audit
             </h3>
-            <p className="text-gray-600 text-xs mb-4">
+            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
               A 10-minute expert review that reveals exactly what&apos;s hurting the conversion.
             </p>
             
-            <span className="inline-block border border-gray-300 text-gray-600 text-xs px-3 py-1 rounded mb-4">
+            <span className="inline-block border border-gray-300 text-gray-600 text-xs px-3 py-1 rounded mb-4 w-fit">
               Free
             </span>
 
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2 mb-6 flex-grow">
               <li className="flex items-start gap-2">
                 <span className="text-gray-400 mt-0.5">•</span>
                 <span className="text-gray-600 text-sm">5—7 bullet points</span>
@@ -106,21 +103,21 @@ export default function Offers() {
               </li>
             </ul>
 
-            <a href="#" className="text-gray-600 text-sm underline hover:text-gray-900">
+            <a href="#" className="text-gray-600 text-sm underline hover:text-gray-900 mt-auto">
               Apply for a Free Clarity Audit
             </a>
           </div>
 
           {/* Offer 2 - Clarity Upgrade */}
-          <div className="bg-white border-l border-r border-gray-200 px-8">
+          <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
             <h3 className="font-bold text-base text-gray-900 mb-2">
               The Landing Page Clarity Upgrade
             </h3>
-            <p className="text-gray-600 text-xs mb-4">
+            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
               A focused redesign that sharpens your message and improves conversion without rebuilding everything.
             </p>
             
-            <span className="inline-block bg-purple-200 text-purple-800 text-xs px-3 py-1 rounded mb-2">
+            <span className="inline-block bg-[#f5d8f4] text-[#b242af] text-xs px-3 py-1 rounded mb-2 w-fit">
               Max Value
             </span>
             
@@ -128,7 +125,7 @@ export default function Offers() {
               <span className="text-2xl font-bold text-gray-900">$1499</span>
             </div>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex-grow">
               <li className="flex items-start gap-2">
                 <span className="text-gray-400 mt-0.5">•</span>
                 <span className="text-gray-600 text-sm">1 landing page redesign</span>
@@ -153,15 +150,15 @@ export default function Offers() {
           </div>
 
           {/* Offer 3 - Authority System */}
-          <div className="bg-white pl-8">
+          <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
             <h3 className="font-bold text-base text-gray-900 mb-2">
               The Authority Landing Page System
             </h3>
-            <p className="text-gray-600 text-xs mb-4">
+            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
               A complete strategy-led redesign that positions you as the obvious choice.
             </p>
             
-            <span className="inline-block bg-purple-600 text-white text-xs px-3 py-1 rounded mb-2">
+            <span className="inline-block bg-[#b242af] text-white text-xs px-3 py-1 rounded mb-2 w-fit">
               Premium
             </span>
             
@@ -172,7 +169,7 @@ export default function Offers() {
             {/* Strategy Section */}
             <div className="mb-4">
               <div className="flex items-center gap-1.5 mb-2">
-                <span className="text-purple-600">🟣</span>
+                <span className="text-[#b242af]">🟣</span>
                 <span className="font-semibold text-sm text-gray-900">Strategy</span>
               </div>
               <ul className="space-y-1.5 ml-5">

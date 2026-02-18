@@ -41,7 +41,7 @@ export default function FinalCTA() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-gray-200">
+    <section ref={sectionRef} className="section-spacing py-16 md:py-24 bg-[#F9F9F9]">
       <div className="container-custom">
         <div
           ref={contentRef}
@@ -60,7 +60,7 @@ export default function FinalCTA() {
               onClick={() => {
                 window.open('#', '_blank')
               }}
-              className="px-8 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-300"
+              className="px-8 py-3 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
             >
               Book a Free Call
             </button>

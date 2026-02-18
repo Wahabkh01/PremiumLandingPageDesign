@@ -96,7 +96,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" ref={sectionRef} className="py-16 md:py-24 bg-white">
+    <section id="faq" ref={sectionRef} className="section-spacing py-16 md:py-24 bg-white">
       <div className="container-custom">
         <h2
           ref={headingRef}

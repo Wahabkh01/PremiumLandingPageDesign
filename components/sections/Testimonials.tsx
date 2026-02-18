@@ -98,7 +98,7 @@ export default function Testimonials() {
   const allTestimonials = [...testimonials, ...testimonials]
 
   return (
-    <section id="testimonials" ref={sectionRef} className="py-16 md:py-24 bg-white border-t border-gray-100 overflow-hidden">
+    <section id="testimonials" ref={sectionRef} className="section-spacing py-16 md:py-24 bg-white overflow-hidden">
       <div className="container-custom">
         <h2
           ref={headingRef}
@@ -118,7 +118,7 @@ export default function Testimonials() {
           {allTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-gray-50 rounded-lg p-6"
+              className="flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
             >
               {/* Author - at top */}
               <div className="flex items-center gap-3 mb-4">

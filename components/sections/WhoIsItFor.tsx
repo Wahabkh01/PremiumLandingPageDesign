@@ -54,12 +54,12 @@ export default function WhoIsItFor() {
   ]
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 mb-16">
+    <section ref={sectionRef} className="section-spacing py-16 md:py-24">
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Who This Is For - White bg */}
-          <div className="bg-white py-10 px-8 md:px-12" ref={contentRef}>
-            <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-6">
+          <div className="bg-white p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)]" ref={contentRef}>
+            <h3 className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-5">
               Who This Is For
             </h3>
 
@@ -77,15 +77,15 @@ export default function WhoIsItFor() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-600 text-sm">{item}</span>
+                  <span className="text-gray-600 text-base">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Who This Is NOT For - Gray bg */}
-          <div className="bg-gray-50 py-10 px-8 md:px-12">
-            <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-6">
+          <div className="bg-[#F9F9F9] p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+            <h3 className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-5">
               Who This Is Not For
             </h3>
 
@@ -103,7 +103,7 @@ export default function WhoIsItFor() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-600 text-sm">{item}</span>
+                  <span className="text-gray-600 text-base">{item}</span>
                 </li>
               ))}
             </ul>

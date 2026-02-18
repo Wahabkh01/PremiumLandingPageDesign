@@ -68,33 +68,33 @@ export default function Hero() {
   }, [])
 
   return (
-    <section ref={heroRef} className="relative pt-28 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+    <section ref={heroRef} className="relative pt-28 pb-0 md:pt-32 md:pb-0 overflow-hidden bg-white">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-5 items-center">
           {/* Left Content */}
-          <div className="max-w-xl">
+          <div className="max-w-3xl">
             <h1
               ref={headingRef}
-              className="font-display font-bold text-4xl md:text-5xl lg:text-[3 rem] leading-[1.5] text-gray-900 mb-8"
+              className="font-display font-bold text-3xl md:text-6xl lg:text-5xl leading-[1.4] text-gray-900 mb-8"
             >
               Turn Your Expertise Into Authority - Not Just Another Website
             </h1>
 
             <p
               ref={subheadingRef}
-              className="text-base md:text-lg text-gray-600 mb-5 leading-relaxed"
+              className="text-lg md:text-xl text-gray-600 mb-5 leading-loose"
             >
               I help coaches and consultants attract premium clients and close faster through high-converting landing pages.
             </p>
 
-            <p className="text-sm text-gray-500 mb-10">
+            <p className="text-base text-gray-500 mb-10 leading-relaxed">
               Built for: High-ticket Coaches • Consultants • Experts • Advisors
             </p>
 
             <div ref={ctaRef} className="flex flex-row gap-3">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
-                className="px-6 py-2.5 bg-purple-600 text-white rounded font-medium text-sm hover:bg-purple-700 transition-all duration-300"
+                className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
               >
                 Book a Free Call
               </button>
@@ -109,19 +109,18 @@ export default function Hero() {
 
           {/* Right Image */}
           <div ref={imageRef} className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm">
-              <div className="aspect-[3/4] bg-gradient-to-b from-amber-200 via-amber-300 to-amber-400 overflow-hidden">
-                <Image
-                  src="/images/banda1.webp"
-                  alt="Premium Landing Page Designer"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  fetchPriority="high"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
-                  quality={85}
-                />
-              </div>
+            <div className="relative min-w-fit max-w-2xl">
+              <Image
+                src="/images/banda1.png"
+                alt="Premium Landing Page Designer"
+                width={150}
+                height={250}
+                className="object-cover object-top w-full h-auto block"
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 450px"
+                quality={85}
+              />
             </div>
           </div>
         </div>
