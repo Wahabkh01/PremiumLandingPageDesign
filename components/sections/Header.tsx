@@ -122,7 +122,7 @@ export default function Header() {
             <a
               href="#how-to-order"
               onClick={(e) => scrollToSection(e, '#how-to-order')}
-              className="px-5 py-2 bg-[#b242af] text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-300"
+              className="px-5 py-2 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
             >
               Book a free call
             </a>

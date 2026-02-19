@@ -69,7 +69,6 @@ export default function FAQ() {
         '',
         'The time will start after you receive confirmation.',
       ],
-      leftAligned: true,
     },
     {
       question: 'How do you take payments?',
@@ -78,7 +77,6 @@ export default function FAQ() {
         '',
         'You will receive my bank details on confirmation.',
       ],
-      leftAligned: false,
     },
     {
       question: 'Can I pay with Paypal?',
@@ -88,7 +86,6 @@ export default function FAQ() {
         'You are free to choose any services you like.',
         'TIP: Generally Wise and Remitly work exceptionally well for USD to Local Bank Transfers in my country.',
       ],
-      leftAligned: false,
     },
     {
       question: 'How to track progress?',
@@ -97,7 +94,6 @@ export default function FAQ() {
         '',
         'You will receive updates on decided times.',
       ],
-      leftAligned: false,
     },
     {
       question: 'How can I stay in touch',
@@ -111,14 +107,12 @@ export default function FAQ() {
         '',
         'After we start working together, you will have access to my Personal Email and WhatsApp',
       ],
-      leftAligned: false,
     },
     {
       question: 'I want a full website redesign',
       answer: [
         'Please book a call with me on Calendly. We will discuss your project and I\'ll curate a custom offer for you.',
       ],
-      leftAligned: false,
     },
   ]
 
@@ -168,15 +162,12 @@ export default function FAQ() {
                   openIndex === index ? 'max-h-[500px] opacity-100 pb-6' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className={`${faq.leftAligned ? '' : 'md:grid md:grid-cols-2 gap-8'} pr-0 md:pr-[200px] lg:pr-[400px]`}>
-                  {!faq.leftAligned && <div className="hidden md:block"></div>}
-                  <div className="font-satoshi text-gray-600 text-sm leading-relaxed">
-                    {faq.answer.map((line, i) => (
-                      <p key={i} className={line === '' ? 'h-3' : ''}>
-                        {line}
-                      </p>
-                    ))}
-                  </div>
+                <div className="font-satoshi text-gray-600 text-sm leading-relaxed">
+                  {faq.answer.map((line, i) => (
+                    <p key={i} className={line === '' ? 'h-3' : ''}>
+                      {line}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
