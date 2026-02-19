@@ -55,19 +55,19 @@ export default function Recommendation() {
       <div className="container-custom">
         <div>
           <div ref={contentRef}>
-            <h2 className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-4 leading-snug">
+            <h2 className="font-display font-bold text-[38px] text-gray-900 mb-4 leading-snug">
               Ready to move forward? Or want my recommendation first?
             </h2>
             
-            <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+            <p className="font-satoshi font-bold text-md text-gray-600 mb-3 leading-relaxed">
               Whether you&apos;ve spotted the right offer or want an expert opinion before committing, the next step is the same: a short call to map what will actually move your business forward.
             </p>
 
-            <p className="text-sm text-gray-600 mb-6">
+            <p className="font-satoshi font-bold text-md text-gray-600 mb-0">
               Incase you are absolutely certain, you can click &quot;Place Order&quot; to get started!
             </p>
 
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row gap-[20px] mt-[48px]">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
                 className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"

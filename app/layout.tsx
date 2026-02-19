@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/images/logo.svg',
-    shortcut: '/images/logo.svg',
-    apple: '/images/logo.svg',
+    icon: '/images/logo.webp',
+    shortcut: '/images/logo.webp',
+    apple: '/images/logo.webp',
   },
   openGraph: {
     title: 'Premium Landing Page Designer | Muhammad Arslan',

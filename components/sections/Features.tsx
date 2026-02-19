@@ -59,12 +59,12 @@ export default function Features() {
             {problems.map((problem, index) => (
               <li key={index} className="flex items-start gap-2">
                 <span className="text-gray-900 text-md">•</span>
-                <span className="text-gray-600 text-md">{problem}</span>
+                <span className="font-satoshi font-medium text-gray-600 text-md">{problem}</span>
               </li>
             ))}
           </ul>
 
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="font-satoshi font-bold text-gray-600 text-lg leading-relaxed max-w-full">
             For high-ticket services, this is <span className="font-semibold text-gray-900">NOT</span> a design issue. It&apos;s a positioning problem – a clarity deficit.
           </p>
         </div>

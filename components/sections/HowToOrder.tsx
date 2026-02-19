@@ -89,7 +89,7 @@ export default function HowToOrder() {
           >
             How to Place Order
           </h2>
-          <p className="text-gray-500 text-sm">
+          <p className="font-satoshi text-gray-500 text-md">
             Pick a service. Submit your details. Secure your slot.
           </p>
         </div>
@@ -98,17 +98,17 @@ export default function HowToOrder() {
         <div ref={stepsRef} className="flex flex-col gap-6 max-w-2xl mx-auto mb-12">
           {steps.map((step, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-              <h3 className="font-bold text-base text-gray-900 mb-2">
+              <h3 className="font-bold text-gray-900 mb-2" style={{ fontSize: '24px' }}>
                 {step.number}. {step.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
+              <p className="font-satoshi text-gray-500 text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
 
         {/* Bottom section with button */}
         <div className="text-center">
-          <p className="text-gray-600 text-sm mb-4">
+          <p className="font-satoshi font-bold text-gray-600 text-sm mb-4">
             I&apos;ll review everything and reach out with next steps.
           </p>
           <button

@@ -47,15 +47,15 @@ export default function FinalCTA() {
           ref={contentRef}
           className="max-w-8xl"
         >
-          <h2 className="font-display font-bold text-3xl md:text-3xl text-gray-900 mb-4">
+          <h2 className="font-display font-bold text-gray-900 mb-4" style={{ fontSize: '36px' }}>
             If your expertise is premium, your website should be too.
           </h2>
 
-          <p className="text-gray-700 mb-8">
+          <p className="font-satoshi font-bold text-gray-700" style={{ fontSize: '20px' }}>
             Book a free call and let's see if we're a good fit.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row" style={{ marginTop: '48px', gap: '20px' }}>
             <button
               onClick={() => {
                 window.open('#', '_blank')

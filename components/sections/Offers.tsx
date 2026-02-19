@@ -77,10 +77,10 @@ export default function Offers() {
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-6">
           {/* Offer 1 - Free Audit */}
           <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
-            <h3 className="font-bold text-base text-gray-900 mb-2">
+            <h3 className="font-bold text-[28px] text-gray-900 mb-2">
               The 10-Minute Landing Page Clarity Audit
             </h3>
-            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
+            <p className="font-satoshi text-gray-600 text-xs mb-4 min-h-[48px]">
               A 10-minute expert review that reveals exactly what&apos;s hurting the conversion.
             </p>
             
@@ -88,32 +88,35 @@ export default function Offers() {
               Free
             </span>
 
-            <ul className="space-y-2 mb-6 flex-grow">
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">5—7 bullet points</span>
+            <ul className="space-y-0">
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-lg">5—7 bullet points</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">Loom video or written breakdown</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-lg">Loom video or written breakdown</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">Clear &quot;what&apos;s hurting conversion&quot;</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-lg">Clear &quot;what&apos;s hurting conversion&quot;</span>
               </li>
             </ul>
 
-            <a href="#" className="text-gray-600 text-sm underline hover:text-gray-900 mt-auto">
+            <button
+              onClick={scrollToOrder}
+              className="w-full py-3 border border-gray-300 text-gray-700 rounded-full font-medium text-sm hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 mt-6"
+            >
               Apply for a Free Clarity Audit
-            </a>
+            </button>
           </div>
 
           {/* Offer 2 - Clarity Upgrade */}
           <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
-            <h3 className="font-bold text-base text-gray-900 mb-2">
+            <h3 className="font-bold text-[28px] text-gray-900 mb-2">
               The Landing Page Clarity Upgrade
             </h3>
-            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
+            <p className="font-satoshi text-gray-600 text-xs mb-4 min-h-[48px]">
               A focused redesign that sharpens your message and improves conversion without rebuilding everything.
             </p>
             
@@ -125,36 +128,36 @@ export default function Offers() {
               <span className="text-2xl font-bold text-gray-900">$1499</span>
             </div>
 
-            <ul className="space-y-2 flex-grow">
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">1 landing page redesign</span>
+            <ul className="space-y-0 flex-grow">
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-md">1 landing page redesign</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">Clear message hierarchy</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-md">Clear message hierarchy</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">Conversion-focused structure</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-md">Conversion-focused structure</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">Desktop + mobile design</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-md">Desktop + mobile design</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">1 revision round</span>
+              <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
+                <span className="text-gray-400">•</span>
+                <span className="font-satoshi text-gray-600 text-md">1 revision round</span>
               </li>
             </ul>
           </div>
 
           {/* Offer 3 - Authority System */}
           <div className="bg-white p-8 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col h-full min-h-[400px]">
-            <h3 className="font-bold text-base text-gray-900 mb-2">
+            <h3 className="font-bold text-[28px] text-gray-900 mb-2">
               The Authority Landing Page System
             </h3>
-            <p className="text-gray-600 text-xs mb-4 min-h-[48px]">
+            <p className="font-satoshi text-gray-600 text-xs mb-4 min-h-[48px]">
               A complete strategy-led redesign that positions you as the obvious choice.
             </p>
             
@@ -169,29 +172,29 @@ export default function Offers() {
             {/* Strategy Section */}
             <div className="mb-4">
               <div className="flex items-center gap-1.5 mb-2">
-                <span className="text-[#b242af]">🟣</span>
+                <span>🧠</span>
                 <span className="font-semibold text-sm text-gray-900">Strategy</span>
               </div>
-              <ul className="space-y-1.5 ml-5">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Deep in-depth audit</span>
+              <ul className="space-y-0 ml-5">
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Deep in-depth audit</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Clear offer & positioning</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Clear offer & positioning</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">CRO-based messaging hierarchy</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">CRO-based messaging hierarchy</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Conversion logic</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Conversion logic</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Identify drop-off points, trust gaps, and clarity issues</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Identify drop-off points, trust gaps, and clarity issues</span>
                 </li>
               </ul>
             </div>
@@ -199,25 +202,25 @@ export default function Offers() {
             {/* Design Section */}
             <div className="mb-4">
               <div className="flex items-center gap-1.5 mb-2">
-                <span className="text-orange-500">🟠</span>
+                <span>🎨</span>
                 <span className="font-semibold text-sm text-gray-900">Design</span>
               </div>
-              <ul className="space-y-1.5 ml-5">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Conversion-focused landing page design</span>
+              <ul className="space-y-0 ml-5">
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Conversion-focused landing page design</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Responsive (desktop + mobile)</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Responsive (desktop + mobile)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Premium visual language</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Premium visual language</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Layouts to improve scannability, attention flow, and CTA visibility</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Layouts to improve scannability, attention flow, and CTA visibility</span>
                 </li>
               </ul>
             </div>
@@ -225,25 +228,25 @@ export default function Offers() {
             {/* Brand Alignment Section */}
             <div className="mb-4">
               <div className="flex items-center gap-1.5 mb-2">
-                <span>⭐</span>
+                <span>🧩</span>
                 <span className="font-semibold text-sm text-gray-900">Brand Alignment</span>
               </div>
-              <ul className="space-y-1.5 ml-5">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Visual direction (colors, type, spacing)</span>
+              <ul className="space-y-0 ml-5">
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Visual direction (colors, type, spacing)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Consistent authority signals</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Consistent authority signals</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Brand clarity</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Brand clarity</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Not a full brand book - but enough</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Not a full brand book - but enough</span>
                 </li>
               </ul>
             </div>
@@ -254,18 +257,18 @@ export default function Offers() {
                 <span>🤝</span>
                 <span className="font-semibold text-sm text-gray-900">Support</span>
               </div>
-              <ul className="space-y-1.5 ml-5">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Collaboration with developer</span>
+              <ul className="space-y-0 ml-5">
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Collaboration with developer</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Design handoff</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Design handoff</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span className="text-gray-600 text-sm">Assistance until page is live</span>
+                <li className="flex items-center gap-2 border-b border-gray-100 pb-2 pt-2">
+                  <span className="text-gray-400">•</span>
+                  <span className="font-satoshi text-gray-600 text-md">Assistance until page is live</span>
                 </li>
               </ul>
             </div>

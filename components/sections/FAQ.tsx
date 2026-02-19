@@ -61,33 +61,64 @@ export default function FAQ() {
   const faqs = [
     {
       question: 'How much time will it take?',
-      answer:
-        'The timeline depends on the package you choose. For the Premium Strategy Session, we\'ll complete everything in a focused 2-hour call. For a full landing page, expect 2-3 weeks from start to finish. I\'ll provide a detailed timeline during our initial consultation so you know exactly what to expect.',
+      answer: [
+        'Depending on the offers,',
+        'Clarity Audit: 3 business days',
+        'Landing Page Clarity Upgrade: 1-2 weeks',
+        'Premium Landing Page System: 4-6 weeks',
+        '',
+        'The time will start after you receive confirmation.',
+      ],
+      leftAligned: true,
     },
     {
       question: 'How do you take payments?',
-      answer:
-        'I accept payments via Stripe for secure credit/debit card transactions. For larger projects, I offer split payments - 50% upfront and 50% upon completion.',
+      answer: [
+        'I take payments directly in my Local Bank Account.',
+        '',
+        'You will receive my bank details on confirmation.',
+      ],
+      leftAligned: false,
     },
     {
       question: 'Can I pay with Paypal?',
-      answer:
-        'Yes, PayPal is available as a payment option. Just let me know your preference during checkout and I\'ll send you the appropriate payment link.',
+      answer: [
+        'Paypal, Wise and similar services are currently not operational in my country. So I can NOT generate a payment link.',
+        '',
+        'You are free to choose any services you like.',
+        'TIP: Generally Wise and Remitly work exceptionally well for USD to Local Bank Transfers in my country.',
+      ],
+      leftAligned: false,
     },
     {
       question: 'How to track progress?',
-      answer:
-        'You\'ll have access to a shared project dashboard where you can see real-time updates. I also send weekly progress summaries with screenshots and next steps clearly outlined.',
+      answer: [
+        'I will inform you upfront on the expected timelines.',
+        '',
+        'You will receive updates on decided times.',
+      ],
+      leftAligned: false,
     },
     {
-      question: 'How can I stay in touch?',
-      answer:
-        'The best way to reach me is via email. I typically respond within 24 hours on business days. For active projects, we can also set up Slack or your preferred communication channel.',
+      question: 'How can I stay in touch',
+      answer: [
+        'You can reach out on my',
+        '',
+        'LinkedIn: linkedin.com/in/arslanranjha/',
+        '',
+        'Email:',
+        'premiumlandingpagedesigner@gmail.com',
+        '',
+        'After we start working together, you will have access to my Personal Email and WhatsApp',
+      ],
+      leftAligned: false,
     },
     {
       question: 'I want a full website redesign',
-      answer:
-        'If you need more than a landing page, I offer custom website projects. Book a free call and we\'ll discuss your requirements, timeline, and create a tailored proposal for your needs.',
+      answer: [
+        'Please book a call with me on Calendly. We will discuss your project and I\'ll curate a custom offer for you.',
+      ],
+      leftAligned: false,
     },
   ]
 
@@ -100,24 +131,24 @@ export default function FAQ() {
       <div className="container-custom">
         <h2
           ref={headingRef}
-          className="font-display font-bold text-2xl md:text-3xl text-center text-gray-900 mb-12"
+          className="font-display font-bold text-3xl md:text-5xl text-gray-900 mb-16"
         >
           Frequently Asked Questions
         </h2>
 
-        <div ref={faqRef} className="max-w-2xl mx-auto space-y-0 divide-y divide-gray-200">
+        <div ref={faqRef} className="space-y-0">
           {faqs.map((faq, index) => (
-            <div key={index} className="py-4">
+            <div key={index} className="border-t border-gray-200">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between text-left"
+                className="w-full flex items-center justify-between text-left py-6"
               >
-                <span className="font-medium text-gray-900">
+                <span className="font-display font-bold text-gray-900 text-lg">
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-45' : ''
+                  className={`w-5 h-5 text-gray-900 flex-shrink-0 transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -127,17 +158,26 @@ export default function FAQ() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 4v16m8-8H4"
+                    d="M19 9l-7 7-7-7"
                   />
                 </svg>
               </button>
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'
+                  openIndex === index ? 'max-h-[500px] opacity-100 pb-6' : 'max-h-0 opacity-0'
                 }`}
               >
-                <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                <div className={`${faq.leftAligned ? '' : 'md:grid md:grid-cols-2 gap-8'} pr-0 md:pr-[200px] lg:pr-[400px]`}>
+                  {!faq.leftAligned && <div className="hidden md:block"></div>}
+                  <div className="font-satoshi text-gray-600 text-sm leading-relaxed">
+                    {faq.answer.map((line, i) => (
+                      <p key={i} className={line === '' ? 'h-3' : ''}>
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           ))}

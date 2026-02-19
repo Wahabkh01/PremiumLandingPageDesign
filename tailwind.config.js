@@ -18,6 +18,7 @@ const config = {
       },
       fontFamily: {
         'montreal': ['Neue Montreal', 'sans-serif'],
+        'satoshi': ['Satoshi', 'sans-serif'],
       },
     },
   },

@@ -70,28 +70,33 @@ export default function Hero() {
   return (
     <section ref={heroRef} className="relative pt-28 pb-0 md:pt-32 md:pb-0 overflow-hidden bg-white">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-5 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left Content */}
           <div className="max-w-3xl">
             <h1
               ref={headingRef}
-              className="font-display font-bold text-3xl md:text-6xl lg:text-5xl leading-[1.4] text-gray-900 mb-8"
+              className="font-display font-bold text-3xl md:text-6xl lg:text-5xl text-gray-900 mb-8"
+              style={{ lineHeight: '150%' }}
             >
               Turn Your Expertise Into Authority - Not Just Another Website
             </h1>
 
             <p
               ref={subheadingRef}
-              className="text-lg md:text-xl text-gray-600 mb-5 leading-loose"
+              className="font-satoshi text-lg md:text-xl text-gray-600 mb-5 leading-loose"
+              style={{ fontWeight: 600 }}
             >
               I help coaches and consultants attract premium clients and close faster through high-converting landing pages.
             </p>
 
-            <p className="text-base text-gray-500 mb-10 leading-relaxed">
+            <p 
+              className="font-satoshi text-base text-gray-500 leading-normal"
+              style={{ fontWeight: 400 }}
+            >
               Built for: High-ticket Coaches • Consultants • Experts • Advisors
             </p>
 
-            <div ref={ctaRef} className="flex flex-row gap-3">
+            <div ref={ctaRef} className="flex flex-row gap-3 mt-10">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
                 className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"

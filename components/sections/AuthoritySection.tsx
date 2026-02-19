@@ -68,27 +68,36 @@ export default function AuthoritySection() {
               Your Designer for Authority-Driven Landing Pages
             </h2>
 
-            <p className="text-gray-600 text-md leading-relaxed mb-4">
+            <p 
+              className="font-satoshi text-gray-600 text-lg mb-4"
+              style={{ fontWeight: 500, lineHeight: '150%' }}
+            >
               Hi, I am Arslan. Your premium landing page designer, focused on minimalist, authority-driven digital experiences.
             </p>
 
-            <p className="text-gray-600 text-md leading-relaxed mb-4">
+            <p 
+              className="font-satoshi text-gray-600 text-lg mb-4"
+              style={{ fontWeight: 500, lineHeight: '150%' }}
+            >
               I work with consultants and coaches who don&apos;t want to look louder. They want to look clearer.
             </p>
 
-            <p className="text-gray-600 text-md leading-relaxed">
+            <p 
+              className="font-satoshi text-gray-600 text-lg"
+              style={{ fontWeight: 700, lineHeight: '150%' }}
+            >
               Minimalism isn&apos;t a style for me. It&apos;s how authority communicates.
             </p>
           </div>
 
           {/* Right Image */}
           <div ref={imageRef} className="flex justify-end">
-            <div className="w-full max-w-md relative rounded-xl overflow-hidden">
+            <div className="w-full max-w-xl relative rounded-xl overflow-hidden">
               <Image
                 src="/images/banda2.webp"
                 alt="Muhammad Arslan - Designer"
-                width={320}
-                height={240}
+                width={480}
+                height={360}
                 className="w-full h-auto object-cover rounded-xl"
               />
             </div>

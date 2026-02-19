@@ -59,12 +59,12 @@ export default function PremiumSection() {
             ].map((point, index) => (
               <li key={index} className="flex items-start gap-2">
                 <span className="text-gray-400 mt-0.5">•</span>
-                <span className="text-gray-600 text-sm">{point}</span>
+                <span className="font-satoshi font-medium text-gray-600 text-md">{point}</span>
               </li>
             ))}
           </ul>
 
-          <p className="text-gray-700 text-sm">
+          <p className="font-satoshi font-bold text-gray-600 text-lg leading-relaxed max-w-full">
             That&apos;s the system I design with. See how this translates into execution below.
           </p>
         </div>
