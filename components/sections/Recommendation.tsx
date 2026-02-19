@@ -70,13 +70,13 @@ export default function Recommendation() {
             <div className="flex flex-row gap-[20px] mt-[48px]">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
-                className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
+                className="px-[30px] py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
               >
                 Book a Free Call
               </button>
               <button
                 onClick={() => scrollToSection('#how-to-order')}
-                className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded font-medium text-sm hover:border-gray-400 transition-all duration-300"
+                className="px-[30px] py-2.5 border border-gray-300 text-gray-700 rounded font-medium text-sm hover:border-gray-400 transition-all duration-300"
               >
                 Place Order
               </button>

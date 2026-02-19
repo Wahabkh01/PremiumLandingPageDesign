@@ -60,7 +60,7 @@ export default function FinalCTA() {
               onClick={() => {
                 window.open('#', '_blank')
               }}
-              className="px-8 py-3 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
+              className="px-[30px] py-2.5 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
             >
               Book a Free Call
             </button>
@@ -71,7 +71,7 @@ export default function FinalCTA() {
                   window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' })
                 }
               }}
-              className="px-8 py-3 border border-gray-300 text-gray-900 rounded-lg font-medium hover:border-gray-400 transition-all duration-300"
+              className="px-[30px] py-2.5 border border-gray-300 text-gray-900 rounded-lg font-medium hover:border-gray-400 transition-all duration-300"
             >
               Place Order
             </button>

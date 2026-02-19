@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
+import Image from 'next/image'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -19,31 +20,37 @@ export default function Testimonials() {
       name: 'Hamza Saleem',
       role: 'CEO Scale Sellers',
       text: 'Arslan helped us revamp the design of our website. His service is very premium and truly value for money. Highly recommended.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
     },
     {
       name: 'Florin Stanciu',
       role: 'Founder at Style Thread',
       text: 'I had the great pleasure of working with Arslan on our current project, "T Style," where he serves as our UI/UX designer. Throughout our collaboration, he has consistently demonstrated a strong user-centered mindset, excellent communication skills, a deep curiosity and research-driven approach, and a sharp problem-solving ability.',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
     },
     {
       name: 'Umer Zahoor',
       role: 'CGO at Findaus',
       text: 'Arslan is a premium landing page designer, and working with him was a great experience. Together, we delivered an extraordinary design that exceeded expectations. One of the things I appreciate most about Arslan is his reliability: he consistently delivers high quality work and always on time. I\'d highly recommend him to anyone looking for top-tier landing page designs.',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
     },
     {
       name: 'Sarah Mitchell',
       role: 'Business Coach',
       text: 'Working with Arslan transformed my online presence completely. My new website not only looks stunning but has doubled my client inquiries in just two months. His attention to detail and understanding of my brand was exceptional.',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
     },
     {
       name: 'Michael Chen',
       role: 'Executive Consultant',
       text: 'The attention to detail and understanding of my brand was exceptional. Arslan delivered exactly what I needed to stand out in a crowded market. Highly professional and easy to work with.',
+      image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face',
     },
     {
       name: 'Jessica Torres',
       role: 'Wellness Coach',
       text: 'I went from feeling embarrassed about my website to being proud to share it. The premium design perfectly reflects the high-end service I provide. Thank you for your outstanding contribution.',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
     },
   ]
 
@@ -122,10 +129,14 @@ export default function Testimonials() {
             >
               {/* Author - at top */}
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-lg font-semibold text-gray-600">
-                    {testimonial.name.charAt(0)}
-                  </div>
+                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-sm text-gray-900">{testimonial.name}</div>

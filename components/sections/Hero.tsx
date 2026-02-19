@@ -99,13 +99,13 @@ export default function Hero() {
             <div ref={ctaRef} className="flex flex-row gap-3 mt-10">
               <button
                 onClick={() => scrollToSection('#how-to-order')}
-                className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
+                className="px-[30px] py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
               >
                 Book a Free Call
               </button>
               <button
                 onClick={() => scrollToSection('#offers')}
-                className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded font-medium text-sm hover:border-gray-400 transition-all duration-300"
+                className="px-[30px] py-2.5 border border-gray-300 text-gray-700 rounded font-medium text-sm hover:border-gray-400 transition-all duration-300"
               >
                 View Offers
               </button>
