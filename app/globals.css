@@ -123,31 +123,45 @@ body {
   
   .container-custom {
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .container-custom {
       padding: 0 2rem;
     }
   }
   
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     .container-custom {
-      padding: 0 500px;
+      padding: 0 3rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container-custom {
+      padding: 0 4rem;
     }
   }
 
   .container-footer {
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .container-footer {
       padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-footer {
+      padding: 0 3rem;
     }
   }
   
