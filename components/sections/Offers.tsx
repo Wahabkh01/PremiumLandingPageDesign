@@ -91,15 +91,15 @@ export default function Offers() {
             <ul className="space-y-0">
               <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
                 <span className="text-gray-400">•</span>
-                <span className="font-satoshi text-gray-600 text-lg">5—7 bullet points</span>
+                <span className="font-satoshi text-gray-600 text-md">5—7 bullet points</span>
               </li>
               <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
                 <span className="text-gray-400">•</span>
-                <span className="font-satoshi text-gray-600 text-lg">Loom video or written breakdown</span>
+                <span className="font-satoshi text-gray-600 text-md">Loom video or written breakdown</span>
               </li>
               <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
                 <span className="text-gray-400">•</span>
-                <span className="font-satoshi text-gray-600 text-lg">Clear &quot;what&apos;s hurting conversion&quot;</span>
+                <span className="font-satoshi text-gray-600 text-md">Clear &quot;what&apos;s hurting conversion&quot;</span>
               </li>
             </ul>
 
