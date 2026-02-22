@@ -20,19 +20,19 @@ export default function Testimonials() {
       name: 'Hamza Saleem',
       role: 'CEO Scale Sellers',
       text: 'Arslan helped us revamp the design of our website. His service is very premium and truly value for money. Highly recommended.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+      image: '/images/Hamza%20saleem.png',
     },
     {
       name: 'Florin Stanciu',
       role: 'Founder at Style Thread',
       text: 'I had the great pleasure of working with Arslan on our current project, "T Style," where he serves as our UI/UX designer. Throughout our collaboration, he has consistently demonstrated a strong user-centered mindset, excellent communication skills, a deep curiosity and research-driven approach, and a sharp problem-solving ability.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+      image: '/images/floria%20standicu.jpg',
     },
     {
       name: 'Umer Zahoor',
       role: 'CGO at Findaus',
       text: 'Arslan is a premium landing page designer, and working with him was a great experience. Together, we delivered an extraordinary design that exceeded expectations. One of the things I appreciate most about Arslan is his reliability: he consistently delivers high quality work and always on time. I\'d highly recommend him to anyone looking for top-tier landing page designs.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+      image: '/images/umer%20zaheoor.jpg',
     },
     {
       name: 'Sarah Mitchell',
