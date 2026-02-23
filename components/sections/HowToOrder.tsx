@@ -1,61 +1,13 @@
-'use client'
+ 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
 import React from 'react'
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 export default function HowToOrder() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const stepsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headingRef.current,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: headingRef.current,
-            start: 'top 85%',
-            once: true,
-          },
-        }
-      )
-
-      if (stepsRef.current?.children.length) {
-        gsap.fromTo(
-          stepsRef.current.children,
-          { y: 50, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: stepsRef.current,
-              start: 'top 85%',
-              once: true,
-            },
-          }
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Scroll-triggered animations removed for static site
 
   const steps = [
     {
@@ -111,17 +63,14 @@ export default function HowToOrder() {
           <p className="font-satoshi font-bold text-gray-600 text-sm mb-4">
             I&apos;ll review everything and reach out with next steps.
           </p>
-          <button
-            onClick={() => {
-              const el = document.getElementById('offers')
-              if (el) {
-                window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' })
-              }
-            }}
+          <a
+            href="https://www.notion.so/Questionnaire-2f7f777dbedb801fb388e0e98af7377c?source=copy_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
           >
             Place Order
-          </button>
+          </a>
         </div>
       </div>
     </section>

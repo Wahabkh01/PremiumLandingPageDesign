@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
-import gsap from 'gsap'
 import React from 'react'
 import Image from 'next/image'
 
@@ -38,13 +37,7 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
 
-    if (headerRef.current) {
-      gsap.fromTo(
-        headerRef.current,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
-      )
-    }
+    // Header entrance animation removed for static site
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -120,8 +113,9 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#how-to-order"
-              onClick={(e) => scrollToSection(e, '#how-to-order')}
+              href="https://calendly.com/premiumlandingpagedesigner/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-[30px] py-2.5 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
             >
               Book a free call
@@ -192,8 +186,9 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#how-to-order"
-              onClick={(e) => scrollToSection(e, '#how-to-order')}
+              href="https://calendly.com/premiumlandingpagedesigner/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 px-[30px] py-2.5 bg-[#b242af] text-white rounded-full font-semibold text-center hover:bg-purple-700 transition-all duration-300"
             >
               Book a free call

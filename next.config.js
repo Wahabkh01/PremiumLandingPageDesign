@@ -21,11 +21,7 @@ const nextConfig = {
   },
   // Target modern browsers only to reduce polyfills
   transpilePackages: [],
-  modularizeImports: {
-    gsap: {
-      transform: 'gsap/{{member}}',
-    },
-  },
+  // modularizeImports cleaned: removed GSAP transform since animations are removed
 }
 
 module.exports = nextConfig

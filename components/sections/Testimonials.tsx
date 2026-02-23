@@ -1,15 +1,8 @@
-'use client'
+ 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
 import React from 'react'
 import Image from 'next/image'
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 export default function Testimonials() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -54,52 +47,9 @@ export default function Testimonials() {
     },
   ]
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+  // Static heading — no animation for static site
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headingRef.current,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: headingRef.current,
-            start: 'top 85%',
-            once: true,
-          },
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
-  // Continuous scrolling animation
-  useEffect(() => {
-    if (!carouselRef.current) return
-
-    const carousel = carouselRef.current
-    const totalWidth = carousel.scrollWidth / 2 // Half because we duplicate items
-
-    const tween = gsap.to(carousel, {
-      x: -totalWidth,
-      duration: 30,
-      ease: 'none',
-      repeat: -1,
-    })
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', () => tween.pause())
-    carousel.addEventListener('mouseleave', () => tween.resume())
-
-    return () => {
-      tween.kill()
-    }
-  }, [])
+  // Removed continuous scrolling animation to keep carousel static
 
   // Duplicate testimonials for seamless loop
   const allTestimonials = [...testimonials, ...testimonials]

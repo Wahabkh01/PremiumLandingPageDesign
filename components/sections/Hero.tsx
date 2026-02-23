@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useCallback } from 'react'
-import gsap from 'gsap'
+import { useRef, useCallback } from 'react'
 import React from 'react'
 import Image from 'next/image'
 
@@ -25,47 +24,7 @@ export default function Hero() {
     }
   }, [])
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Use GPU-accelerated transforms to avoid forced reflow
-      gsap.set([headingRef.current, subheadingRef.current, ctaRef.current, imageRef.current], {
-        willChange: 'transform, opacity',
-      })
-
-      const tl = gsap.timeline({ 
-        defaults: { 
-          ease: 'power3.out',
-          force3D: true,
-        } 
-      })
-
-      tl.fromTo(
-        headingRef.current,
-        { yPercent: 20, opacity: 0 },
-        { yPercent: 0, opacity: 1, duration: 0.8, delay: 0.2 }
-      )
-        .fromTo(
-          subheadingRef.current,
-          { yPercent: 15, opacity: 0 },
-          { yPercent: 0, opacity: 1, duration: 0.6 },
-          '-=0.4'
-        )
-        .fromTo(
-          ctaRef.current,
-          { yPercent: 10, opacity: 0 },
-          { yPercent: 0, opacity: 1, duration: 0.6 },
-          '-=0.3'
-        )
-        .fromTo(
-          imageRef.current,
-          { xPercent: 10, opacity: 0 },
-          { xPercent: 0, opacity: 1, duration: 0.8, clearProps: 'willChange' },
-          '-=0.5'
-        )
-    }, heroRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Entrance animations removed for static site
 
   return (
     <section ref={heroRef} className="relative pt-28 pb-0 md:pt-32 md:pb-0 overflow-hidden bg-white">
@@ -97,12 +56,14 @@ export default function Hero() {
             </p>
 
             <div ref={ctaRef} className="flex flex-row gap-3 mt-10">
-              <button
-                onClick={() => scrollToSection('#how-to-order')}
+              <a
+                href="https://calendly.com/premiumlandingpagedesigner/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-[30px] py-2.5 bg-[#b242af] text-white rounded font-medium text-sm hover:bg-[#8f3590] transition-all duration-300"
               >
                 Book a Free Call
-              </button>
+              </a>
               <button
                 onClick={() => scrollToSection('#offers')}
                 className="px-[30px] py-2.5 border border-gray-300 text-gray-700 rounded font-medium text-sm hover:border-gray-400 transition-all duration-300"

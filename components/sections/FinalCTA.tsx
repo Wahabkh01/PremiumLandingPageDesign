@@ -1,44 +1,12 @@
-'use client'
+ 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
 import React from 'react'
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 export default function FinalCTA() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      if (contentRef.current?.children.length) {
-        gsap.fromTo(
-          contentRef.current.children,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.7,
-            stagger: 0.12,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: contentRef.current,
-              start: 'top 85%',
-              once: true,
-            },
-          }
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Scroll-triggered animations removed for static page
 
   return (
     <section ref={sectionRef} className="section-spacing py-16 md:py-24 bg-[#F9F9F9]">
@@ -56,17 +24,18 @@ export default function FinalCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row" style={{ marginTop: '48px', gap: '20px' }}>
-            <button
-              onClick={() => {
-                window.open('#', '_blank')
-              }}
+            <a
+              href="https://calendly.com/premiumlandingpagedesigner/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-[30px] py-2.5 bg-[#b242af] text-white rounded-lg font-medium hover:bg-[#8f3590] transition-all duration-300"
             >
               Book a Free Call
-            </button>
-            <button
+            </a>
+            <a
+              href="#how-to-order"
               onClick={() => {
-                const el = document.getElementById('offers')
+                const el = document.getElementById('how-to-order')
                 if (el) {
                   window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' })
                 }
@@ -74,7 +43,7 @@ export default function FinalCTA() {
               className="px-[30px] py-2.5 border border-gray-300 text-gray-900 rounded-lg font-medium hover:border-gray-400 transition-all duration-300"
             >
               Place Order
-            </button>
+            </a>
           </div>
         </div>
       </div>

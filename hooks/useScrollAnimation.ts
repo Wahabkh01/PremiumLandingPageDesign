@@ -1,8 +1,4 @@
 import { useEffect, RefObject } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 interface ScrollAnimationOptions {
   trigger?: RefObject<HTMLElement>
@@ -16,27 +12,12 @@ interface ScrollAnimationOptions {
 
 export const useScrollAnimation = (
   elementRef: RefObject<HTMLElement>,
-  animation: gsap.TweenVars,
+  // kept as any to avoid tying to GSAP types
+  animation: any,
   options: ScrollAnimationOptions = {}
 ) => {
+  // No-op hook for static site: intentionally does not create animations.
   useEffect(() => {
-    if (!elementRef.current) return
-
-    const ctx = gsap.context(() => {
-      gsap.from(elementRef.current!, {
-        ...animation,
-        scrollTrigger: {
-          trigger: options.trigger?.current || elementRef.current,
-          start: options.start || 'top 80%',
-          end: options.end,
-          scrub: options.scrub,
-          markers: options.markers,
-          onEnter: options.onEnter,
-          onLeave: options.onLeave,
-        },
-      })
-    })
-
-    return () => ctx.revert()
+    // Intentionally empty to keep the same API surface.
   }, [elementRef, animation, options])
 }

@@ -1,61 +1,13 @@
-'use client'
+ 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
 import React from 'react'
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 export default function Offers() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headingRef.current,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: headingRef.current,
-            start: 'top 85%',
-            once: true,
-          },
-        }
-      )
-
-      if (cardsRef.current?.children.length) {
-        gsap.fromTo(
-          cardsRef.current.children,
-          { y: 60, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.7,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: cardsRef.current,
-              start: 'top 85%',
-              once: true,
-            },
-          }
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Scroll-triggered entrance animations removed for static site
 
   const scrollToOrder = () => {
     const el = document.getElementById('how-to-order')
@@ -91,7 +43,7 @@ export default function Offers() {
             <ul className="space-y-0">
               <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
                 <span className="text-gray-400">•</span>
-                <span className="font-satoshi text-gray-600 text-md">5—7 bullet points</span>
+                <span className="font-satoshi text-gray-600 text-md">5 - 7 bullet points</span>
               </li>
               <li className="flex items-center gap-2 border-b border-gray-100 pb-3 pt-3">
                 <span className="text-gray-400">•</span>
