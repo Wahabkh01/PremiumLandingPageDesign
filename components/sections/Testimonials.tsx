@@ -66,11 +66,11 @@ export default function Testimonials() {
       </div>
 
       {/* Carousel Container - full width */}
-      <div className="relative w-full" role="region" aria-label="Customer testimonials">
+      <div className="relative w-full overflow-hidden" role="region" aria-label="Customer testimonials">
         <div
           ref={carouselRef}
-          className="flex gap-6"
-          style={{ width: 'max-content', willChange: 'transform' }}
+          className="carousel-track flex gap-6"
+          style={{ willChange: 'transform' }}
         >
           {allTestimonials.map((testimonial, index) => (
             <div
@@ -101,6 +101,31 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        <style jsx>{`
+          .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            animation: marquee 30s linear infinite;
+            align-items: flex-start;
+          }
+
+          .carousel-track:hover {
+            animation-play-state: paused;
+          }
+
+          .carousel-track > div {
+            flex-shrink: 0;
+          }
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0%);
+            }
+          }
+        `}</style>
       </div>
     </section>
   )
